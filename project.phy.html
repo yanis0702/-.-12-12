@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Застосування Інтерференції в Техніці — Проєкт з Оптики</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f4fb;
+      --primary: #a66dd4;
+      --secondary: #7e8ce0;
+      --text: #2c3e50;
+      --highlight: #dfe6f3;
+      --border: #c5cae9;
+      --correct: #2ecc71;
+      --incorrect: #e74c3c;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-bottom: 5px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    section {
+      padding: 4rem 10%;
+      border-bottom: 3px solid var(--border);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 4px;
+      background-color: var(--secondary);
+      margin-top: 10px;
+    }
+
+    p, ul li {
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .interactive {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: var(--highlight);
+      border-radius: 10px;
+      border: 2px dashed var(--border);
+    }
+
+    .question {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .question.active {
+      display: block;
+      animation: fade 0.5s ease-in-out forwards;
+    }
+
+    .answers button {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      background-color: var(--secondary);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .answers button:hover {
+      background-color: var(--primary);
+      transform: scale(1.03);
+    }
+
+    .answers button.correct {
+      background-color: var(--correct);
+    }
+
+    .answers button.incorrect {
+      background-color: var(--incorrect);
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--highlight);
+      color: var(--text);
+      border-top: 5px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Захист навчальних проектів з теми: " Оптика."</h1>
+    <p> Застосування Інтерференції в Техніці — виконав Нестерук Ярослав 11-ІТ</p>
+  </header>
+
+  <section>
+    <div class="info-block">
+    <h2>Огляд</h2>
+    <img src="Інтерференція.jpg" alt="Інтерференція" style="float: right; width: 300px; margin: 10px;">
+    <p>Інтерференція — це явище, що виникає внаслідок накладання двох або більше хвиль, які мають однакову частоту та постійну різницю фаз. Це накладання може призвести до підсилення (конструктивна інтерференція) або послаблення (деструктивна інтерференція) амплітуди хвиль. Інтерференційні явища широко використовуються в техніці та науці.</p>
+    </div>
+    
+    
+    <section>
+    
+        <div class="info-block">
+          <h2>Застосування в оптичних приладах</h2>
+          <p>Інтерференція застосовується у таких галузях:
+            <ul>
+              <li><span class="highlight">Інтерферометри</span> — вимірюють дуже малі зміщення, довжини хвиль, та інші фізичні величини з високою точністю.</li>
+              <li><span class="highlight">Антивідбивні покриття</span> — зменшують відбиття світла від поверхонь лінз, покращуючи якість зображення.</li>
+              <img src="Оптична когерентна томографія.jpg" alt="Оптична когерентна томографія" style="float: right; width: 300px; margin: 10px;">
+              <li><strong>Оптична когерентна томографія</strong> — медична візуалізація для діагностики сітківки, судин, шкіри тощо.</li>
+              <li><strong>Фільтри та сенсори</strong> — створення інтерференційних фільтрів для спектроскопії, телекомунікацій та лазерних систем.</li>
+              <li><strong>Лазерні системи</strong> — стабілізація частоти та фаз лазерного випромінювання за допомогою інтерференції.</li>
+              <li><span class="highlight">Голографія</span> — технологія тривимірної візуалізації, яка базується на інтерференції хвиль, створення об’ємних зображень за допомогою когерентного лазерного світла.</li>
+            </ul>
+          </p>
+        </div>
+        <p>Інтерференція також є основою роботи таких великих наукових проєктів, як LIGO — лазерний інтерферометр для виявлення гравітаційних хвиль. Технології, що базуються на інтерференції, дозволяють досягати мікроскопічної точності, яка недоступна іншими методами. Саме завдяки цим досягненням ми можемо створювати нові покоління телескопів, лазерів, комунікаційних пристроїв та медичних апаратів.</p>
+
+        <div class="info-block">
+          <h2>Інтерференція в промисловості</h2>
+          <p>У промисловості інтерференцію застосовують для:</p>
+          <ul>
+            <li>Контролю якості поверхонь (оптична інспекція).</li>
+            <li>Нанесення тонких плівок на сенсори та екрани.</li>
+            <li>Вимірювання мікроскопічних змін у матеріалах під навантаженням.</li>
+          </ul>
+        </div>
+    
+        <div class="info-block">
+          <h2>Сучасні технології</h2>
+          <p>Інтерференція використовується в:</p>
+          <ul>
+            <li><span class="highlight">Лазерах</span> — для формування стабільного світлового пучка.</li>
+            <li><span class="highlight">Датчиках та сенсорах</span> — оптичні сенсори тиску, температури, переміщення.</li>
+            <li><span class="highlight">Мікроскопії</span> — інтерференційна мікроскопія дозволяє спостерігати наноструктури.</li>
+          </ul>
+        </div>
+      </section>
+
+    <div class="interactive">
+      <h2>🎮 Інтерактивний тест</h2>
+      <div id="quiz">
+        <div class="question active" id="q1">
+          <p><strong>1. Що таке когерентність?</strong></p>
+          <div class="answers">
+            <button onclick="checkAnswer(this, false)">Різниця частот хвиль</button>
+            <button onclick="checkAnswer(this, true)">Постійна різниця фаз між хвилями</button>
+            <button onclick="checkAnswer(this, false)">Світлове відбиття</button>
+          </div>
+        </div>
+
+        <div class="question" id="q2">
+          <p><strong>2. Яка різниця між конструктивною та деструктивною інтерференцією?</strong></p>
+          <div class="answers">
+            <button onclick="checkAnswer(this, false)">Різниця в кольорі світла</button>
+            <button onclick="checkAnswer(this, false)">Поглинання світла тілом</button>
+            <button onclick="checkAnswer(this, true)">Підсилення або послаблення хвиль при накладанні</button>
+          </div>
+        </div>
+
+        <div class="question" id="q3">
+          <p><strong>3. Де застосовується інтерферометрія в медицині?</strong></p>
+          <div class="answers">
+            <button onclick="checkAnswer(this, true)">Оптична когерентна томографія</button>
+            <button onclick="checkAnswer(this, false)">Рентгенографія</button>
+            <button onclick="checkAnswer(this, false)">Магнітна резонансна томографія</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Джерела</h2>
+    <ul>
+      <li>Hecht, E. (2002). Optics. 4th Edition. Addison Wesley.</li>
+      <li>Born, M. & Wolf, E. (1999). Principles of Optics. Cambridge University Press.</li>
+      <li><a href="https://www.ligo.caltech.edu/" target="_blank">LIGO Caltech</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Interference_(wave_propagation)" target="_blank">Wikipedia: Interference</a></li>
+      <li><a href="https://www.nature.com/articles/nphoton.2011.245" target="_blank">Nature Photonics</a></li>
+      <li><a href="https://pubs.acs.org/doi/10.1021/photonics.1c00123" target="_blank">ACS Photonics (2021)</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <h1>Дякую за перегляд!!!🥰 🥰 🥰  </h1>
+    <p>надіюсь буде 12😉 </p>
+    <p>Шкільний проєкт | Оптика 2025 | Всі права захищені</p>
+  </footer>
+
+  <script>
+    let current = 0;
+    const questions = document.querySelectorAll('.question');
+
+    function checkAnswer(btn, isCorrect) {
+      const buttons = btn.parentElement.querySelectorAll('button');
+      buttons.forEach(b => {
+        b.disabled = true;
+        b.classList.remove('correct', 'incorrect');
+      });
+      btn.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      if (isCorrect) {
+        setTimeout(() => {
+          questions[current].classList.remove('active');
+          current++;
+          if (questions[current]) {
+            questions[current].classList.add('active');
+          } else {
+            alert('Тест завершено!');
+          }
+        }, 800);
+      }
+    }
+  </script>
+</body>
+</html>
+
+
